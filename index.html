@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<link rel='reset' href='assets/css/reset.css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> 
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
+</head>
+
+<body>
+
+<div class='container'>
+	<div class='row'>
+		<div class='col-sm-12'>
+			<div class='jumbotron text-center'>
+				<h1> Train Schedule </h1>
+			</div>
+		</div>
+	</div>
+	<div class='row'>
+		<div class='col-sm-12'>
+			<div class='panel panel-primary'>
+				<div class='panel-heading'>
+					<strong>Current train schedule</strong>
+				</div>
+				<table id='trainData' class='table'>
+					<tr>
+						<th>Train Name</th>
+						<th>Destination</th>
+						<th>Frequency</th>
+						<th>Next Arrival</th>
+						<th>Minutes Away</th>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div class='row'>
+		<div class='col-sm-12'>
+			<div class='panel panel-primary'>
+				<div class='panel-heading'>
+					<strong>Add Train</strong>
+				</div>
+				<div class='panel-body'>
+					<form>
+						<div class='form-group'>
+							<label for="trainName">Train Name </label>
+							<input id="trainName" class='form-control'>
+						</div>
+						<div class='form-group'>
+							<label for="destination">Destination </label>
+							<input id="destination" class='form-control'>
+						</div>
+						<div class='form-group'>
+							<label for='firstTrain'>First Train Time (HH:mm - military time)</label>
+							<input id='firstTrain' class='form-control'>
+						</div>
+						<div class='form-group'>
+							<label for='frequency'>Frequency (min)</label>
+							<input id='frequency' class='form-control'>
+						</div>
+						<button id="submitMe" class='btn btn-primary'>Submit</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript" src="assets/javascript/app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
+</body>
+</html>
